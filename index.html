@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MGNREGA District Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>MGNREGA District Performance Dashboard</h1>
+    <p>Empowering citizens with transparent data access</p>
+  </header>
+
+  <main>
+    <section class="selector">
+      <label for="district">Select your District:</label>
+      <select id="district">
+        <option value="">-- Select District --</option>
+        <option value="khordha">Khordha</option>
+        <option value="cuttack">Cuttack</option>
+        <option value="puri">Puri</option>
+      </select>
+      <button id="viewData">View Performance</button>
+    </section>
+
+    <section id="dataSection" class="hidden">
+      <div class="cards">
+        <div class="card">
+          <h3>Workers Engaged</h3>
+          <p id="workers">--</p>
+        </div>
+        <div class="card">
+          <h3>Total Expenditure</h3>
+          <p id="expenditure">--</p>
+        </div>
+        <div class="card">
+          <h3>Works Completed</h3>
+          <p id="works">--</p>
+        </div>
+        <div class="card">
+          <h3>Month</h3>
+          <p id="month">--</p>
+        </div>
+      </div>
+
+      <canvas id="chart" width="400" height="200"></canvas>
+    </section>
+  </main>
+
+  <section class="motivation-banner">
+  <p><i class='bx bx-group'></i> Together, we create opportunities for every skill and every dream. <i class='bx bx-leaf'></i></p>
+</section>
+
+
+  <footer>
+    <p>© 2025 Built for Bharat Fellowship | Developed by <strong>Subham Kumar Senapati</strong></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

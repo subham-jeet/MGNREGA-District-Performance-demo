@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #eae2b7;
+  color: #003049;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #003049;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  animation: fadeInDown 1s ease;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+}
+
+.selector {
+  margin-bottom: 2rem;
+  animation: fadeIn 1.2s ease;
+}
+
+label {
+  font-size: 1.1rem;
+  margin-right: 10px;
+}
+
+select, button {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid #003049;
+  outline: none;
+}
+
+button {
+  background-color: #f77f00;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #d62828;
+  transform: scale(1.05);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: #fcbf49;
+  color: #003049;
+  padding: 1.2rem;
+  width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  animation: fadeInUp 1.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background-color: #f77f00;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  background-color: #003049;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.motivation-banner {
+  background-color: #fcbf49;
+  color: #003049;
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 1rem 0;
+  font-weight: 600;
+  overflow: hidden;
+  position: relative;
+  border-top: 2px solid #003049;
+  border-bottom: 2px solid #003049;
+}
+
+.motivation-banner p {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollText 15s linear infinite;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.motivation-banner i {
+  color: #d62828;
+  margin: 0 8px;
+}
